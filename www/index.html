@@ -1,0 +1,36 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon App JS</title>
+
+  <!-- Tailwind CDN (dev / prototypage) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class=" flex items-center justify-center h-screen">
+  
+  <div class=" p-6 rounded-2xl shadow-xl w-80">
+    <h1 class="text-3xl font-bold underline">Generateur de mot de passe</h1>
+     <h1 class="text-3xl font-bold underline">Sadek - IT</h1>
+     <form>
+        <input type="text" id="length" placeholder="Longueur du mot de passe" class="w-full p-2 mt-4 border rounded" />
+        <button type="submit" id ="generate"class="w-full p-2 mt-4 bg-blue-500 text-white rounded">Générer</button>
+       
+        <input type="checkbox" id="includeLowercase" class="mt-4" />
+        <label for="includeLowercase" class="ml-2">Inclure des minuscules</label><br>
+
+        <input type="checkbox" id="includeUppercase" class="mt-4" />
+        <label for="includeUppercase" class="ml-2">Inclure des majuscules</label><br>
+        
+        <input type="checkbox" id="includeNumbers" class="mt-4" />
+        <label for="includeNumbers" class="ml-2">Inclure des chiffres</label><br>
+        
+        <input type="checkbox" id="includeSymbols" class="mt-4" />
+        <label for="includeSymbols" class="ml-2">Inclure des symboles</label><br>
+        
+
+    </form>
+  </div>
+  
+  <script src="main.js"></script>
