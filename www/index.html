@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class=" flex items-center justify-center h-screen">
+<body class=" bg-[#0f172a] text-white flex items-center justify-center h-screen">
   
   <div class=" p-6 rounded-2xl shadow-xl w-80">
     <h1 class="text-3xl font-bold underline">Generateur de mot de passe</h1>
@@ -29,6 +29,7 @@
         <input type="checkbox" id="includeSymbols" class="mt-4" />
         <label for="includeSymbols" class="ml-2">Inclure des symboles</label><br>
         
+        <input class = "w-full p-2 mt-4 border rounded" type="text" id="passwordResult" value="" readonly>
 
     </form>
   </div>

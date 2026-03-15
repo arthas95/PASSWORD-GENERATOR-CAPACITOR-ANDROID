@@ -1,15 +1,24 @@
 let lebody = document.querySelector("body");
+
+
 const input = document.getElementById("length");
+input.style.color = "#333";
 const button = document.getElementById("generate");
 const includeLowercase = document.getElementById("includeLowercase");
 const includeUppercase = document.getElementById("includeUppercase");
 const includeNumbers = document.getElementById("includeNumbers");
 const includeSymbols = document.getElementById("includeSymbols");
 
+const result = document.getElementById("passwordResult");
+result.style.display = "none";
+
 button.addEventListener("click", () => {
+    event.preventDefault();
     let length = input.value;
     let password = generatePassword(length);
     alert(password);
+    result.value = password;
+    
 });
 
 
@@ -39,5 +48,7 @@ if (includeSymbols.checked) {
         let randomIndex = Math.floor(Math.random() * charset.length);
         password += charset[randomIndex];
     }
+    result.style.color = "#333";
+    result.style.display = "block";
     return password;
 }
